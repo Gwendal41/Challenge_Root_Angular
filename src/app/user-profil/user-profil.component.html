@@ -1,0 +1,15 @@
+<div class="contact">
+    <img [src]= 'user1.photo' alt="">
+    <p>Nom : {{user1.name}}</p>
+    <p>Prenom : {{user1.firstName}}</p>
+    <p>{{user1.quote}}</p>
+        <input type="text" [(ngModel)]="user1.quote">
+        <div class="input-container">
+        <p  class="height-p">
+           <span *ngIf="user1.showUserAge">
+            age : {{user1.age}}
+           </span>
+        </p>
+        <button (click)="user1.hiddenAge()" > Click bg </button>
+    </div>
+</div>
